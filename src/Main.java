@@ -1,17 +1,23 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner sc=new Scanner(System.in);
+        double sum= 0;
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.println("Size of the array:");
+        double n= sc.nextDouble();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        double[] list=new double[(int) n];
+        System.out.println("Enter the array elements:");
+
+        for (int i=0;i<n;i++){
+            list[i]= sc.nextDouble();
+            System.out.println("Next element please: ");
         }
+
+        for (double i=0;i< list.length;i++){
+            sum+= 1.0/ list[(int) i];
+        }
+        System.out.println("Harmonic Avarage ==> "+list.length/sum);
     }
 }
